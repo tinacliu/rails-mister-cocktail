@@ -1,0 +1,21 @@
+
+<div class="row bg-white py-2">
+  <div class="col-5 px-5">
+    <%= image_tag "thyme_delight.jpg", alt: "cocktail",  width: "100%" %>
+  </div>
+
+  <div class="col-6 recipe">
+    <div class="text-right">
+      <h1><%= @cocktail.name %></h1>
+    </div>
+
+    <p class="mt-2">The Thyme to Delight cocktail was derived through a new tea supplier who gave me a sample of an amazing hibiscus tea. With its intricate flavour profile I wanted to create a fruity drink which uses a traditional Clover Club breakdown with a few enhancements to bring it to life. Strawberries infuse this rich, floral American style gin which is then balanced with citrus and the hero of the cocktail, the Thyme & Hibiscus syrup.</p>
+
+    <%= render 'cocktails/ingredientlist' %>
+  </div>
+</div>
+
+<div class="row bg-white py-2">
+  <div class="col-6">
+  </div>
+</div>

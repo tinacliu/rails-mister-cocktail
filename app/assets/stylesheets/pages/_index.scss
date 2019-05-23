@@ -1,2 +1,13 @@
 // Import page-specific CSS files here.
 @import "home";
+@import "details";
+
+
+.highlight {
+  background: linear-gradient(180deg, rgba(255,255,255,0) 65%, $op-green 65%);
+}
+
+.highlight-pink {
+  background: linear-gradient(180deg, rgba(255,255,255,0) 65%, $op-pink 65%);
+}
+

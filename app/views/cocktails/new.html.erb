@@ -1,0 +1,7 @@
+
+<div class="row w-50 bg-white py-2 mx-auto">
+  <%= simple_form_for @cocktail do |f| -%>
+    <%= f.input :name, placeholder: 'name of the cocktail' %>
+    <%= f.submit "add", class: "btn btn-outline-primary" %>
+  <% end -%>
+</div>

@@ -1,0 +1,30 @@
+
+<div class="row py-2">
+  <div class="col-5 box-headline">
+    <h3 class="highlight-pink">discover</h3>
+    <h2>SUMMER</h2>
+    <h1>cocktails</h1>
+    <h4 class="text-center"><i class="fas fa-chevron-down"></i></h4>
+  </div>
+  <div class="col-6">
+    <%= image_tag "goop_cocktails.jpg", alt: "Cocktails for summer",  width: "100%" %>
+  </div>
+</div>
+
+<div class="row py-2 justify-content-center">
+  <div class="col-6 text-center"><hr></div>
+</div>
+
+<div class="grid-cocktail">
+  <% @cocktails.each do |cocktail| %>
+    <div class="card-cocktail">
+      <%= image_tag "thyme_delight.jpg", class: "card-img-top",  width: "100%" %>
+      <%= link_to cocktail_path(cocktail) do %>
+        <p class="text-center p-2"><%= cocktail.name %></p>
+      <% end %>
+  </div>
+  <% end %>
+</div>
+
+
+<!-- style="width: 18rem;" -->

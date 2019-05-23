@@ -1,0 +1,21 @@
+.recipe {
+  h1 {
+    background: linear-gradient(180deg, rgba(255,255,255,0) 65%, $op-green 65%);
+    display: inline;
+    font-size: 48px;
+    text-align: right;
+  }
+  p {
+    font-size: 15px;
+    text-align: justify;
+  }
+}
+
+
+.ingredient-list a {
+  color: $pink;
+  &:hover {
+    color: $golden-brown;
+  }
+}
+

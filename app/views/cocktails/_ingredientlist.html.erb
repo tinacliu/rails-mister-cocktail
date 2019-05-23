@@ -1,0 +1,11 @@
+<h6 class="mt-4"><span class="highlight">Ingredients</span></h6>
+
+<% @cocktail.doses.each do |dose|  %>
+  <p class="mb-1 ingredient-list">
+    <%= link_to '[ - ]', dose_path(dose),
+      method: :delete,
+      data: { confirm: "Confirm deleting #{dose.ingredient.name}" } %>
+    <%= " #{dose.ingredient.name } | #{dose.description}" %></p>
+<% end %>
+
+<%= link_to '+ ingredient', new_cocktail_dose_path(@cocktail), class: "btn btn-danger btn-sm mt-2" %>

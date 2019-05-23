@@ -1,1 +1,37 @@
 // Specific CSS for your home-page
+// @import "../config/colors";
+
+.box-headline {
+  padding-top: 5vw;
+  padding-left: 5vw;
+  position:relative;
+  h1 h2 h3 {
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+  }
+  h2 {
+    // position:absolute;
+    font-size: 72px;
+    color: $lime-green;
+    font-family: $main-header;
+  }
+  h3 {
+    font-size: 48px;
+    margin-left: 160px;
+    color: $gray;
+  }
+  h1 {
+    font-size: 64px;
+    margin-left: 80px;
+    color: $gray;
+  }
+}
+
+.grid-cocktail {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 56px;
+  grid-row-gap: 16px;
+  margin: 24px 48px
+}
+
