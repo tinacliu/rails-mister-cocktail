@@ -2,9 +2,12 @@
 <div class="row w-100 border p-3">
   <div class="mx-auto">
     <%= simple_form_for [@cocktail, @dose] do |f| -%>
-      <%= f.association :ingredient %>
+      <%= f.association :ingredient, input_html: { class: "select2" }  %>
       <%= f.input :description, placeholder: 'how much of this ingredient' %>
       <%= f.submit "add", class: "btn btn-outline-primary" %>
     <% end -%>
   </div>
 </div>
+
+
+      <%#= f.association :ingredient, html_options: { class: "select2" }  %>
