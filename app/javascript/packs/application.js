@@ -19,3 +19,12 @@ import 'bootstrap';
 
 console.log('Hello World from Webpacker')
 
+const addDoseBtn = document.querySelector("#add-dose-btn");
+const ingredientForm = document.querySelector(".ingredient-form");
+
+addDoseBtn.addEventListener('click', (event) => {
+  console.log("clicked");
+  console.log(ingredientForm.style);
+  ingredientForm.style.display = "block";
+  console.log(ingredientForm.style);
+});

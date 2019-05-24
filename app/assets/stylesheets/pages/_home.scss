@@ -30,8 +30,9 @@
 .grid-cocktail {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
   grid-column-gap: 56px;
-  grid-row-gap: 16px;
+  grid-row-gap: 8px;
   margin: 24px 48px
 }
 

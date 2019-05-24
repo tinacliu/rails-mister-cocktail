@@ -18,7 +18,7 @@
 <div class="grid-cocktail">
   <% @cocktails.each do |cocktail| %>
     <div class="card-cocktail">
-      <%= image_tag "thyme_delight.jpg", class: "card-img-top",  width: "100%" %>
+      <%= cl_image_tag cocktail.photo, class: "card-img-top",  width: "100%" %>
       <%= link_to cocktail_path(cocktail) do %>
         <p class="text-center p-2"><%= cocktail.name %></p>
       <% end %>

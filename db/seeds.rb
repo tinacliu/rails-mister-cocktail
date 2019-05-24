@@ -27,15 +27,19 @@ end
 
 puts 'creating 1 cocktail and 1 dose'
 
-@cocktail = Cocktail.create!(name: "Thyme Delight")
+cocktail = Cocktail.create!(
+  name: "Thyme Delight",
+  description: "The Thyme to Delight cocktail was derived through a new tea supplier who gave me a sample of an amazing hibiscus tea. With its intricate flavour profile I wanted to create a fruity drink which uses a traditional Clover Club breakdown with a few enhancements to bring it to life. Strawberries infuse this rich, floral American style gin which is then balanced with citrus and the hero of the cocktail, the Thyme & Hibiscus syrup."
+)
+url = "https://stevethebartender.com.au/wp-content/uploads/2016/02/strawberry-gin-cocktail.jpg"
+cocktail.remote_photo_url = url
+cocktail.save
 
-@dose1 = Dose.new(description: "40g")
-@ice = Ingredient.find_by(name: "Ice")
-@dose1.cocktail = @cocktail
-@dose1.ingredient = @ice
-@dose1.save
+dose1 = Dose.new(description: "40g")
+ice = Ingredient.find_by(name: "Ice")
+dose1.cocktail = cocktail
+dose1.ingredient = ice
+dose1.save
 
-@cocktail = Cocktail.create!(name: "Sonoma")
-@cocktail = Cocktail.create!(name: "Gin & Tonic")
 
 puts 'finished'
