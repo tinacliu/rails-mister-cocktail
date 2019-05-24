@@ -18,10 +18,10 @@ puts 'creating ingredients'
 response = open('https://www.thecocktaildb.com/api/json/v1/1/list.php?i=list')
 json = JSON.parse(response.read)
 
-p json['drinks']
+# p json['drinks']
 
 json['drinks'].each do |hash|
-  puts "creating #{hash['strIngredient1']}"
+  # puts "creating #{hash['strIngredient1']}"
   Ingredient.create!(name: hash['strIngredient1'])
 end
 
