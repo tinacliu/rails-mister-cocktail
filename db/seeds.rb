@@ -9,18 +9,20 @@ require 'open-uri'
 
 puts 'Cleaning database...'
 
-Ingredient.destroy_all
-Dose.destroy_all
 Cocktail.destroy_all
+Dose.destroy_all
+Ingredient.destroy_all
 
 puts 'creating ingredients'
 
 response = open('https://www.thecocktaildb.com/api/json/v1/1/list.php?i=list')
 json = JSON.parse(response.read)
-max_i = json['drinks'].size
 
-(0..max_i).each do |i|
-  Ingredient.create!(name: json['drinks'][i]['strIngredient1'])
+p json['drinks']
+
+json['drinks'].each do |hash|
+  puts "creating #{hash['strIngredient1']}"
+  Ingredient.create!(name: hash['strIngredient1'])
 end
 
 puts 'creating 1 cocktail and 1 dose'
@@ -32,5 +34,8 @@ puts 'creating 1 cocktail and 1 dose'
 @dose1.cocktail = @cocktail
 @dose1.ingredient = @ice
 @dose1.save
+
+@cocktail = Cocktail.create!(name: "Sonoma")
+@cocktail = Cocktail.create!(name: "Gin & Tonic")
 
 puts 'finished'
