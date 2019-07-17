@@ -17,10 +17,10 @@
 
 <div class="grid-cocktail">
   <% @cocktails.each do |cocktail| %>
-    <div class="card-cocktail">
-      <%= cl_image_tag cocktail.photo, class: "card-img-top",  width: "100%" %>
-      <%= link_to cocktail_path(cocktail) do %>
-        <p class="text-center p-2"><%= cocktail.name %></p>
+    <div class="card-cocktail" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)">
+      <%= link_to cocktail_path(cocktail), class: "text-decoration-none" do %>
+        <%= cl_image_tag cocktail.photo, class: "card-img-top card-img-size",  width: "100%" %>
+        <p class="p-2"><span class="title"><%= cocktail.name %></span></p>
       <% end %>
   </div>
   <% end %>
@@ -28,3 +28,21 @@
 
 
 <!-- style="width: 18rem;" -->
+
+
+<script>
+function mouseOver(elem) {
+  const cocktailTitle = elem.querySelector(".title");
+  console.log(elem);
+  console.log(cocktailTitle)
+  cocktailTitle.classList.add("highlight-pink");
+}
+
+function mouseOut(elem) {
+  const cocktailTitle = elem.querySelector(".title");
+  console.log(elem);
+  console.log(cocktailTitle)
+  cocktailTitle.classList.remove("highlight-pink");
+}
+</script>
+

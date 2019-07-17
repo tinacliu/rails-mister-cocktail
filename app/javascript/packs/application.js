@@ -23,15 +23,21 @@ import { initSelect2 } from '../components/init_select2';
 initSelect2();
 
 
-console.log('Hello World from Webpacker')
 
 
+// code to display form when click on add dose button
 const addDoseBtn = document.querySelector("#add-dose-btn");
 const ingredientForm = document.querySelector(".ingredient-form");
+if (addDoseBtn){
 
-addDoseBtn.addEventListener('click', (event) => {
-  console.log("clicked");
-  console.log(ingredientForm.style);
-  ingredientForm.style.display = "block";
-  console.log(ingredientForm.style);
-});
+  addDoseBtn.addEventListener('click', (event) => {
+    console.log("clicked");
+    console.log(ingredientForm.style);
+    ingredientForm.style.display = "block";
+    console.log(ingredientForm.style);
+  });
+}
+
+
+
+
