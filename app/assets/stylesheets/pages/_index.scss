@@ -11,3 +11,15 @@
   background: linear-gradient(180deg, rgba(255,255,255,0) 65%, $op-pink 65%);
 }
 
+
+#page-container {
+    position: relative;
+    min-height: 100vh;
+    // padding-bottom: 2.5rem;
+}
+
+#content-wrap {
+  padding-bottom: 4rem;
+}
+
+

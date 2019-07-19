@@ -1,0 +1,28 @@
+.footer-dream {
+  background-color: $gray;
+  margin-top: 160px;
+  padding: 40px 140px 0px 40px;
+  color: white;
+  font-size: 12px;
+  font-weight: 300;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer-legal {
+  display: flex;
+  margin: 32px 0px;
+  p {
+    margin-right: 8px;
+  }
+}
+
+.footer-social {
+  display: flex;
+  justify-content: left;
+  i {
+    font-size: 16px;
+    margin-top: 16px;
+    margin-right: 16px;
+  }
+}

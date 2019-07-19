@@ -14,9 +14,15 @@
 
   <body>
 
-    <div class="container mt-4 py-2 bg-white">
-      <%= render 'layouts/navbar' %>
-      <%= yield %>
+    <div id="page-container">
+      <div class="container mt-4 py-2 bg-white">
+        <div id="content-wrap">
+          <%= render 'layouts/navbar' %>
+          <%= yield %>
+        </div>
+        <!-- <div class="w-50 mx-auto"><hr></div> -->
+      </div>
+      <%= render 'layouts/footer' %>
     </div>
 
     <%= javascript_pack_tag "application" %>    <!-- from app/javascript/packs/application.js -->

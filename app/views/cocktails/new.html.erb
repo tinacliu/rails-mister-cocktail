@@ -1,10 +1,21 @@
 
-<div class="row w-50 bg-white py-2 mx-auto">
-  <%= simple_form_for @cocktail do |f| -%>
-    <%= f.input :name, placeholder: 'name of the cocktail' %>
-    <%= f.input :description, placeholder: 'Tell us about this cocktail' %>
-    <%= f.input :photo %>
-    <%= f.input :photo_cache, as: :hidden %>
-    <%= f.submit "add", class: "btn btn-outline-primary" %>
-  <% end -%>
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-xs-12 col-md-8 mb-4">
+      <h5 class="my-4">Add Your Favorite Summer Cocktail</h5>
+      <%= simple_form_for @cocktail do |f| -%>
+        <%= f.input :name, placeholder: 'Name of the cocktail' %>
+        <%= f.input :description, placeholder: 'Tell us about this cocktail' %>
+        <%= f.input :photo %>
+        <%= f.input :photo_cache, as: :hidden %>
+        <%= f.submit "add", class: "btn btn-outline-primary" %>
+      <% end -%>
+      <div class="my-5">
+        <%= link_to 'Back to All Cocktails', root_path, class: "highlight"%>
+      </div>
+    </div>
+  </div>
 </div>
+
+
+
